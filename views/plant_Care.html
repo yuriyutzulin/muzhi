@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../public/page.css">
+    
+    <style>
+        .blackText li:hover {
+            background-color: rgb(19, 100, 146);
+            /* text-decoration: none; */
+        }
+
+        .toph {
+            height: 70px;
+        }
+
+        .conli {
+            color: whitesmoke;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        /* rgb(95,158,160,0.5) */
+    </style>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <!-- TOP navbar -->
+    <div>
+        <nav class="navbar navbar-expand-lg  sticky-top">
+            <div class="container-fluid ">
+                <a class="navbar-brand " href="homePage.html">木 直</a>
+                <!-- 網頁縮到最小，將列表聚集，待調整位置-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="navbar-nav  navbar-right  ">
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <li class="nav-item  mx-3 dropdown"> <!-- 下拉式選單 -->
+                            <a class="nav-link dropdown-toggle " href="products.html" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                商品分類
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                <li>
+                                    <h6 class="dropdown-header">花盆</h6>
+                                </li>
+                                <li><a class="dropdown-item" href="products.html?category=g">陶瓷</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=p">鐵砂</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <h6 class="dropdown-header">園藝工具</h6>
+                                </li>
+                                <li><a class="dropdown-item" href="products.html?category=scissors">剪刀｜器具</a></li>
+                                <li><a class="dropdown-item" href="products.html?category=tools">換盆幫手</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="products.html?category=gm">介質</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link" href="news.html">最新消息</a>
+                        </li>
+                        <li class="nav-item  mx-3">
+                            <a class="nav-link" href="#">聯絡我們</a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <% if (userName=="Guest" ) { %>
+                                <a href="/login.html"><i class="bi bi-person-fill"></i></a>
+                                <% } else { %>
+                                    <a href="/logout"><i class="bi bi-box-arrow-in-left"></i></a>
+                                    <% } %>
+                                        Hi! <%= userName %>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container py-5 p-4 m-2 md-2 ">
+            <aside class="sidebar">
+                <p></p>
+                <ul class="list-unstyled blackText">
+                    <h4 class="mx-2" style="color: azure;">目錄</h4>
+                    <li class=" my-2 mx-3 border-top"></li>
+                    <ul class="list-unstyled my-2 mx-2 blackText">
+                        <li><a href="#title1" style="text-decoration: none; color: whitesmoke;"> 01
+                                什麼是植物?</a></li>
+                        <li><a href="#title2" style="text-decoration: none; color: whitesmoke;"> 02
+                                照顧植物的關鍵</a></li>
+                        <li><a href="#title3" style="text-decoration: none; color: whitesmoke;"> 03
+                                介質與盆器</a></li>
+                        <li><a href="#title4" style="text-decoration: none; color: whitesmoke;"> 04
+                                植物照顧的管理習慣</a></li>
+
+                        <li><a href="#title5" style=" text-decoration: none; color: whitesmoke;"> 05
+                                如何判斷植物需求?</a></li>
+                    </ul>
+                </ul>
+            </aside>
+            <div class="main "> <!--pl-5 pt-5 -->
+                <h2 class="display-7 fw-light">【完整教學】植物照顧終極指南 向黑手指說掰掰</h2>
+                <br>
+                <dd class="row">
+                    <img class="plantOnePic pl-1 img-fluid" src="../public/img/plant/p1_1.jpg" alt="">
+                </dd>
+                <dd class="plantfont ">
+                    想讀懂植物的語言嗎？了解植物何時需要喝水、照陽光媽？那你來對地方了！研究指出與植物互動能夠讓你更健康，不論是身體還是心理都有助益，
+                    這篇文章不只有空泛的基礎照顧教學，還希望讓你了解更深的照顧心法，希望這篇文章能讓大家都能輕鬆享受植物的美好，把園藝種植基礎打好，看完後從此遠離黑手指的稱號，慢慢成為綠手指。
+                </dd>
+                <div id="title1" class="toph border border-0"></div>
+                <dt> 什麼是植物? </dt>
+                <dd class="row">
+                    <img class="plantOnePic  col-sm-6" src="../public/img/plant/p1_3.jpg" alt="">
+                    <img class="plantOnePic  col-sm-6" src="../public/img/plant/p1_4.jpg" alt="">
+                </dd>
+                <div class="plantfont ">
+                    什麼是植物？植物就是有細胞壁、行光合作用的多細胞生物，目前認為植物約有 50 萬種。人類從舊石器時代，開始定居並開啟原始農業開始研究植物，
+                    關於植物的第一份實體文字記錄大約是一萬年前，當植物從 35 億年前就殖民了海洋，最早的人類不過兩百萬年前才出現呢！植物是多麽神秘而神奇的生命，讓我們都沈醉在他們的魅力中。
+                </div>
+
+                <div id="title2" class="toph border border-0"></div>
+                <dt> 照顧植物的關鍵</dt>
+                <div class="row">
+                    <img class="plantOnePic  col-sm-6" src="../public/img/plant/p1_5.jpg" alt="">
+                    <br>
+                    <dd class="col-sm-6 plantfont ">
+                        植物照顧的心法呢，第一件是「了解自家種植環境的狀態」、第二件事是「了解植物喜歡的環境」；進階的兩件事，「了解自己願意為了植物改變環境與生活方式到什麼程度」、「了解植物對環境的接受彈性程度」。也可以說因地制宜，了解自己的環境並給予最合適的照顧方式。
+                        上述這些因素與心法綜合起來，就像是一張「植物照顧矩陣」，所有因素都交織在一起，隨著文章慢慢的學習，你的能力就逐漸填滿矩陣的空白，就能大幅度降低在植物照顧上失敗的機率。
+                    </dd>
+                </div>
+
+                <div id="title3" class="toph border border-0"></div>
+                <dt> 介質與盆器</dt>
+                <div class="row">
+                    <img class="plantOnePic  col-sm-6" src="../public/img/plant/p1_7.jpg" alt="">
+                    <img class="plantOnePic  col-sm-6" src="../public/img/plant/p1_8.jpg" alt="">
+                    <br>
+                </div>
+                <dd class="plantfont ">
+                    將土的稱呼改為介質會能包容更多種土壤的選擇，多數植物都喜歡透氣性佳的土壤，因為根部除了吸水之外也需要「呼吸空氣」唷，不同的介質也有不同的營養成分與特質，搭配自己的澆水頻率高低也可以調整介質的酥鬆程度。如果想了解多肉植物介質也可以看這一篇多肉專用介質介紹。
+                    若在介質表面還是濕潤的狀態下澆水，根部的水分會過於飽和，導致淹水，如此一來，植物根部便無法呼吸，呈現窒息狀態！此外，若一直保有水份，植物無法長出新根，根群也無法茁壯地生長。脆弱的根部即使能在一直保有水分的狀態下生長無礙，不過一旦處於長期乾燥下，受損的程度就會十分嚴重，甚至會出現完全枯萎、乾死等情形。
+                    <br><br>
+                    根部也能獲得所需的氧氣，澆水後，待盆內的水順暢排出，進行空氣交換的工作，確認土壤乾燥後，即可進行下一次的澆水工作。
+                    盆器挑選上則可以參考三個原則，若今天栽培的是不需要土壤來吸取養分的空氣鳳梨，那麼其實也會有很不一樣的考量喔！
+                    <br><br>
+                    <div class="bordercol border border-3 border-top-0 rounded-bottom">
+                        <figure>
+                            <figcaption class="blockquote py-1 text-center fs-4 fw-bold">Tips</figcaption>
+                            <ul style="list-style-type: none;">
+                                <li>有洞的盆器 - 提升土壤介質的排水能力，讓根系呼吸。</li>
+                                <li>能排水的材質 - 水泥盆、陶盆、瓦盆等材質都能有效協助盆中的土壤排出水分。</li>
+                                <li>美觀考量 - 挑選符合室內裝潢風格、色系的盆器。</li>
+                            </ul>
+                        </figure>
+                    </div>
+                </dd>
+
+                <div id="title4" class="toph border border-0"></div>
+                <dt> 植物照顧的管理習慣</dt>
+                <div class="row">
+                    <div class="col-md-6 custom-height" style="position: relative; overflow: hidden;">
+                        <img src="../public/img/plant/p1_9.jpg" alt=""
+                            style="width: 105%; height: 98%; position: absolute; top: 50%; transform: translateY(-50%);">
+                    </div>
+                    <div class="col-md-6 custom-height-lg">
+                        <img class="col-md-12 p-1" src="../public/img/plant/p1_10.jpg" alt="">
+                        <img class="col-md-12 p-1" src="../public/img/plant/p1_11.jpg" alt="">
+                    </div>
+                </div>
+                <dd class="plantfont ">
+                    先說一個最常遇到的狀況，「過度澆水的植物」比「缺水的植物」要更難救回！過度澆水的植物容易發生根部腐爛等問題，需要整株重新種植，而缺水的植物只需要找到合適的澆水方式就可以解決，除了了解環境、了解植物，了解自己也很重要的呢！每個人的標準與認識都不同，在植物照顧上也會顯現出差異。
+                    <br><br>
+                    <div class="bordercol border border-3 border-top-0 rounded-bottom">
+                        <figure>
+                            <figcaption class="blockquote py-1 text-center fs-4 fw-bold">Tips</figcaption>
+                            <ul style="list-style-type: none;">
+                                <li>澆水頻率 - 喜歡澆水嗎？只想一週澆一次水嗎？不同的想法會導出不一樣的環境建構。</li>
+                                <li>老葉管理 - 能接受老葉黃化自然凋零嗎？還是不能接受一絲絲黃葉呢？這會是不一樣與植物互動的頻率。</li>
+                                <li>出差旅遊 - 旅遊或出國的頻率高嗎？能找到人幫忙照顧植物嗎？大致上的策略會是評估植株的耐旱程度，如果不太耐乾旱就需要墊水盤，如果像多肉植物那樣耐乾，其實影響就不大。
+                                </li>
+                            </ul>
+                        </figure>
+                    </div>
+                </dd>
+                <div id="title5" class="toph border border-0"></div>
+                <dt>如何判斷植物需求?</dt>
+                <div class="row">
+                    <img class="plantOnePic col-sm-6" src="../public/img/plant/p1_12.jpg" alt="">
+                    <img class="plantOnePic col-sm-6" src="../public/img/plant/p1_13.jpg" alt="">
+                </div>
+                <dd class="plantfont ">
+                    觀察，關鍵還是在於花時間觀察，大自然是一本無窮盡的寶書，翻閱不完的，植物生長中變換環境時需要一些時間去適應，若你的多肉植物是在全日照的農場或苗圃買的，這些多肉原本是種植在有強烈日照的環境生長，帶回去之後放在室外繼續照顧，通常不會有太大的問題，如果你是在植物店裡買的多肉盆栽，通常植物生活在室內、外散光處生長，若是放在一樣的環境生長也不會有太大的問題，但若是直接放在露天的環境下，就有可能會有一些小問題囉！
+                    <br><br>
+                    <div class="bordercol border border-3 border-top-0 rounded-bottom">
+                        <figure>
+                            <figcaption class="blockquote py-1 text-center fs-4 fw-bold">Tips</figcaption>
+                            <ul style="list-style-type: none;">
+                                <li>植物缺光徒長 - 葉片間隔距離拉長、新生葉子變小。</li>
+                                <li>植物爛根 - 底下的莖爛掉了嗎？可能是太潮溼了喔！根系無法呼吸就會變成這樣，要注意澆水量與土壤的成分喔。</li>
+                                <li>病蟲害 - 有小白蟲在爬？可能是介殼蟲，趕緊用棉花棒或小鑷子把他們去除，如果還是有很多就要更換土壤了。</li>
+                                <li>曬傷 - 你是不是從低光照的地方一次把他放去全日照的地方？葉片上出現黃褐色的部位是曬傷了無法恢復了喔。</li>
+                                <li>植物進入休眠期 -
+                                    休眠期的植物處在生長停滯的狀況下，他其實也不需要太多水分，而你在此時澆了過多的水分，多肉認為自己不需要這麼多水，葉子就有可能會發生果凍化，其他植物就很可能會爛根給你看。
+                                </li>
+                            </ul>
+                        </figure>
+                    </div>
+                </dd>
+            </div>
+        </div>
+
+    </div>
+    <!-- 網頁底部 -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- col-6 網頁縮到最小，只出現12/6=2格 12/3=4  -->
+                <div class="col-6 col-md-3">
+                    <h3>木直園藝工作坊</h3>
+                </div>
+                <div class="col-6 col-md-3">
+                </div>
+                <div class="col-6 col-md-3">
+                    <ul>
+                        <li>
+                            <h6>木 直</h6>
+                        </li>
+                        <li>09-12534645 </li>
+                        <li>台中市南屯區公益路二段51號</li>
+                        <li>客服信箱：service@muji.com.tw</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <ul>
+                        <li>
+                            <h6>OPEN HOURS</h6>
+                        </li>
+                        <li>週一至週五 13:00-18:30</li>
+                        <li>週六及週日 11:00-18:30</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+        // 獲得當前navbar
+        var navbar = document.getElementById('navbar');
+        var prevScrollpos = window.pageYOffset;
+
+        // 網頁捲動
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                // 向上捲動，顯示navbar
+                navbar.style.top = '0';
+            } else if (prevScrollpos < currentScrollPos) {
+                // 向下捲動，隱藏navbar
+                navbar.style.top = '-60px'; // 根據navbar的高度來調整值
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+        //top按鈕
+        let mybutton = document.getElementById("myBtn");
+
+        //當網頁向下捲動20px後會出現button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        //document.documentElement.scrollTop:獲取垂直滾動距離，適合用在較現代的瀏覽器
+        //document.body.scrollTop:獲取垂直滾動距離，常用在較舊的瀏覽器
+
+        // 點擊button，回到網頁最上面
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>

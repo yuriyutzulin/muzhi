@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>木 直</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../public/page.css">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- TOP navbar -->
+    <nav class="navbar navbar-expand-lg  sticky-top">
+        <div class="container-fluid ">
+            <a class="navbar-brand " href="homePage.html">木 直</a>
+            <!-- 網頁縮到最小，將列表聚集，待調整位置-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav  navbar-right  ">
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <li class="nav-item  mx-3 dropdown"> <!-- 下拉式選單 -->
+                        <a class="nav-link dropdown-toggle " href="products.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            商品分類
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <li>
+                                <h6 class="dropdown-header">花盆</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="products.html?category=g">陶瓷</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=p">鐵砂</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <h6 class="dropdown-header">園藝工具</h6>
+                            </li>
+                            <li><a class="dropdown-item" href="products.html?category=scissors">剪刀｜器具</a></li>
+                            <li><a class="dropdown-item" href="products.html?category=tools">換盆幫手</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="products.html?category=gm">介質</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="news.html">最新消息</a>
+                    </li>
+                    <li class="nav-item  mx-3">
+                        <a class="nav-link" href="#">聯絡我們</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <% if (userName=="Guest" ) { %>
+                            <a href="/login.html"><i class="bi bi-person-fill"></i></a>
+                            <% } else { %>
+                                <a href="/logout"><i class="bi bi-box-arrow-in-left"></i></a>
+                                <% } %>
+                                    Hi! <%= userName %>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br><br><br>
+    <!-- main -->
+    <div class="container">
+        <figure>
+            <figcaption class="blockquote">
+                <p>
+                <h3>
+                    <p class="lead text-center">每月推薦一款多肉，透過細細的介紹、分享與他們有關的小故事，欣賞植物的美、愛上與多肉相處的時光。</p>
+                </h3>
+                </p>
+            </figcaption>
+        </figure>
+        <br><br>
+        <h2 class="display-7 fw-light">多肉圖鑑：美乳柱 ( 福祿龍神木 )</h2>
+        <br>
+        <dd class="row">
+            <img class="plantOnePic pl-1 img-fluid" src="../public/img/plant/p2_1.jpg" alt="">
+            <figure class="text-center">
+                <br>
+                <figcaption class="col-sm-12 pl-1 blockquote-footer">美乳柱，仙人掌科，神龍柱屬。
+                    <cite> Myrtillocactus geometrizans cv. Fukurokuryuzinboku</cite>
+                </figcaption>
+            </figure>
+        </dd>
+        <dd class="plantfont col-sm-12">福祿龍神木，又名美乳柱或玉乳柱，為柱狀仙人掌龍神木的變異品種，從名字 Fukurokuryuzinboku
+            可看出是由日本培育出的品種。日本命名是以日本神話七福神（福祿壽）＆ 龍神組合而成，象徵著財富、幸福、健康…等寓意，適合送禮祝賀用途。
+        </dd>
+        <dd class="row">
+            <img class="plantOnePic " src="../public/img/plant/p2_2.jpg" alt="">
+        </dd>
+        <br>
+        <dt class="plantTitleFont ">來自日本育種的美乳柱</dt>
+
+        <dd class="plantfont col-sm-12">
+            <p>龍神木（ M. geometrizans ）原產於墨西哥中部高原，美乳柱（福祿龍神木）則是日本培育出的變異種。美乳柱的獨特之處在於特殊疣狀突起，形似女性的乳房，因此得名美乳柱，英文亦稱作：Titty
+                Cactus, Breast Cactus。</p>
+            <p>美乳柱在形態上除了擁有乳房形狀的疣點，其他特徵與龍神木相似。整株植物由肉質化的柱狀莖構成，生長緩慢但高度可達 4.5 米，直至高達 6
+                米才會開花。夏天會於表面慢慢增加一層藍色的粉，生長期會從尖端開始產生獨特如乳房狀疣點，疣點上會長出 3 至 5 個短刺。綠色的疣也形似台灣常見的木瓜，只不過變成結實累累的木瓜柱。</p>
+        </dd>
+        <dd class="row">
+            <img class="plantOnePic  col-sm-6" src="../public/img/plant/p2_2.jpg" alt="">
+            <img class="plantOnePic  col-sm-6" src="../public/img/plant/p2_3.jpg" alt="">
+        </dd>
+        <dt class="plantTitleFont ">養護條件</dt>
+        <dd class="plantfont col-sm-12">
+            <p>生長期為夏季，約 10~14 天
+                澆水一次，但需視環境判斷，以土壤完全乾燥後再澆水為首要條件。栽培介質應具有良好的排水性，可加入石礫或顆粒的礦物介質。生長季也可適度施肥，有助於植株穩健生長。冬季保持乾燥，莖部出現萎縮跡象時，再行澆水即可。且需注意低於
+                10 度時要採取防寒措施。</p>
+
+            <p>美乳柱是需要全日照和耐旱的植物，建議將其放置在朝南的位置，確保充足的陽光照射。儘管在半日照的情況下仍能生存，但可能會出現徒長的情況。如果選擇在室內種植，建議可搭配植物燈來補足光照。</p>
+        </dd>
+        <figure>
+            <figcaption class="blockquote p-4">由於龍神木系列是大型植物，需要足夠的根部空間，建議每年更換一次花盆</figcaption>
+        </figure>
+        <dd class="plantfont col-sm-12">
+            繁殖以扦插為主，夏季、秋季繁殖為佳，溫度高的季節有利於發根。取下莖頂 10~15 公分，待傷口乾燥後扦插即可，扦插後需保持乾燥較易生根；如果不直接進行扦插，也可以將剪下來的莖段放在陰涼處， 21~28
+            天左右傷口處會長出根，之後再定植到花盆中。
+        </dd>
+        </dl>
+        <dd class="row">
+            <img class="plantOnePic " src="../public/img/plant/p2_4.jpg" alt="">
+        </dd>
+    </div>
+    <br>
+    <hr>
+    <div class="fw-light text-center ">認識更多照護方法：
+        <a style="text-decoration: none; color: darkseagreen;" href="plant_Care.html">【完整教學】植物照顧終極指南 向黑手指說掰掰</a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <!-- 網頁底部 -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- col-6 網頁縮到最小，只出現12/6=2格 12/3=4  -->
+                <div class="col-6 col-md-3">
+                    <h3>木直園藝工作坊</h3>
+                </div>
+                <div class="col-6 col-md-3">
+                </div>
+                <div class="col-6 col-md-3">
+                    <ul>
+                        <li>
+                            <h6>木 直</h6>
+                        </li>
+                        <li>09-12534645 </li>
+                        <li>台中市南屯區公益路二段51號</li>
+                        <li>客服信箱：service@muji.com.tw</li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <ul>
+                        <li>
+                            <h6>OPEN HOURS</h6>
+                        </li>
+                        <li>週一至週五 13:00-18:30</li>
+                        <li>週六及週日 11:00-18:30</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <script>
+        //top按鈕
+        let mybutton = document.getElementById("myBtn");
+
+        //當網頁向下捲動20px後會出現button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        //document.documentElement.scrollTop:獲取垂直滾動距離，適合用在較現代的瀏覽器
+        //document.body.scrollTop:獲取垂直滾動距離，常用在較舊的瀏覽器
+
+        // 點擊button，回到網頁最上面
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
